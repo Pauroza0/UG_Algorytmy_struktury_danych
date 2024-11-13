@@ -35,4 +35,14 @@ public abstract class Heap {
         heap[indexOne] = heap[indexTwo];
         heap[indexTwo] = temp;
     }
+
+    public int[] getHeap() {
+        return heap;
+    }
+    protected abstract void heapifyUp(int index);
+    protected abstract void heapifyDown(int index);
+    protected abstract void heapify(int startIndex);
+    public abstract void insert(int value);
+    public abstract int poll();
+    protected abstract void buildHeap(int[] arr);
 }
